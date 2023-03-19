@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="synthwave">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Datatable UI</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css"
+			rel="stylesheet"
+			type="text/css" />
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="flex justify-center items-center gap-48 mx-0 my-14">
+		<form class="flex flex-col gap-8" onsubmit="event.preventDefault()">
+			<h1 class="font-extrabold text-3xl text-primary">Input Form</h1>
+			<section>
+				<label class="input-group">
+					<span class="text-primary">Name</span>
+					<input
+						type="text"
+						name="name"
+						class="input input-bordered input-secondary input-sm w-64 text-accent"
+						placeholder="Juan Dela Cruz" />
+				</label>
+			</section>
+			<section
+				class="bg-base-300 px-4 py-1 rounded-xl border border-secondary">
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary">1st Year</span>
+						<input
+							type="radio"
+							name="year"
+							class="radio radio-accent"
+							checked />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary">2nd Year</span>
+						<input
+							type="radio"
+							name="year"
+							class="radio radio-accent" />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary">3rd Year</span>
+						<input
+							type="radio"
+							name="year"
+							class="radio radio-accent" />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary">4th Year</span>
+						<input
+							type="radio"
+							name="year"
+							class="radio radio-accent" />
+					</label>
+				</div>
+			</section>
+			<section
+				class="bg-base-300 px-4 py-1 rounded-xl border border-secondary">
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary"
+							>Computer Science</span
+						>
+						<input
+							type="radio"
+							name="program"
+							class="radio radio-accent"
+							checked />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary"
+							>Data Science</span
+						>
+						<input
+							type="radio"
+							name="program"
+							class="radio radio-accent" />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary"
+							>Information Technology</span
+						>
+						<input
+							type="radio"
+							name="program"
+							class="radio radio-accent" />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary"
+							>Information System</span
+						>
+						<input
+							type="radio"
+							name="program"
+							class="radio radio-accent" />
+					</label>
+				</div>
+			</section>
+			<section
+				class="bg-base-300 px-4 py-1 rounded-xl border border-secondary">
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary">Male</span>
+						<input
+							type="radio"
+							name="gender"
+							class="radio radio-accent"
+							checked />
+					</label>
+				</div>
+				<div>
+					<label class="label cursor-pointer">
+						<span class="label-text text-primary">Female</span>
+						<input
+							type="radio"
+							name="gender"
+							class="radio radio-accent" />
+					</label>
+				</div>
+			</section>
+			<button class="btn btn-sm btn-secondary bg-base-100 text-primary">
+				Submit
+			</button>
+		</form>
+		<section class="flex flex-col gap-8">
+			<form onsubmit="event.preventDefault()"></form>
+			<table class="table">
+				<thead class="text-center text-secondary">
+					<tr>
+						<th>NAME</th>
+						<th>YEAR</th>
+						<th>COURSE</th>
+						<th>GENDER</th>
+						<th>FINAL GRADE</th>
+						<th>ACTION</th>
+					</tr>
+				</thead>
+				<tbody class="text-primary">
+					<tr class="hover">
+						<td>Marvin Eloja</td>
+						<td>2nd</td>
+						<td>IT</td>
+						<td>Male</td>
+						<td>100</td>
+						<td class="text-center">
+							<button
+								class="btn btn-sm btn-outline btn-error btn-circle">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-x-lg"
+									viewBox="0 0 16 16">
+									<path
+										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+								</svg>
+							</button>
+						</td>
+					</tr>
+					<tr class="hover">
+						<td>Kervi Asombrado</td>
+						<td>2nd</td>
+						<td>IT</td>
+						<td>Male</td>
+						<td>100</td>
+						<td class="text-center">
+							<button
+								class="btn btn-sm btn-outline btn-error btn-circle">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-x-lg"
+									viewBox="0 0 16 16">
+									<path
+										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+								</svg>
+							</button>
+						</td>
+					</tr>
+					<tr class="hover">
+						<td>Kurt Mercado</td>
+						<td>2nd</td>
+						<td>IT</td>
+						<td>Male</td>
+						<td>100</td>
+						<td class="text-center">
+							<button
+								class="btn btn-sm btn-outline btn-error btn-circle">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-x-lg"
+									viewBox="0 0 16 16">
+									<path
+										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+								</svg>
+							</button>
+						</td>
+					</tr>
+					<tr class="hover">
+						<td>Ethan Zogg</td>
+						<td>2nd</td>
+						<td>IT</td>
+						<td>Male</td>
+						<td>100</td>
+						<td class="text-center">
+							<button
+								class="btn btn-sm btn-outline btn-error btn-circle">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-x-lg"
+									viewBox="0 0 16 16">
+									<path
+										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+								</svg>
+							</button>
+						</td>
+					</tr>
+					<tr class="hover">
+						<td>Cian Chang</td>
+						<td>2nd</td>
+						<td>IT</td>
+						<td>Male</td>
+						<td>100</td>
+						<td class="text-center">
+							<button
+								class="btn btn-sm btn-outline btn-error btn-circle">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="16"
+									height="16"
+									fill="currentColor"
+									class="bi bi-x-lg"
+									viewBox="0 0 16 16">
+									<path
+										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+								</svg>
+							</button>
+						</td>
+					</tr>
+				</tbody>
+				<tfoot class="text-accent">
+					<tr>
+						<th colspan="4">AVG. GRADE</th>
+						<td colspan="2">100</td>
+					</tr>
+				</tfoot>
+			</table>
+		</section>
+	</body>
+</html>
