@@ -141,7 +141,129 @@
 			</button>
 		</form>
 		<section class="flex flex-col gap-8">
-			<form onsubmit="event.preventDefault()"></form>
+			<form class="flex flex-col gap-3" onsubmit="event.preventDefault()">
+				<section>
+					<label class="input-group input-group-sm">
+						<span class="text-primary">Name</span>
+						<input
+							type="text"
+							name="name"
+							class="input input-bordered input-secondary input-sm w-64 text-accent"
+							placeholder="Juan Dela Cruz" />
+					</label>
+				</section>
+				<label class="input-group input-group-sm">
+					<span class="text-primary">Year</span>
+					<section
+						class="flex gap-3 w-max px-2 rounded-xl border border-secondary">
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="year"
+								class="radio radio-accent radio-sm"
+								checked />
+							<span class="label-text text-primary bg-base-100"
+								>1st</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="year"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>2nd</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="year"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>3rd</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="year"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>4th</span
+							>
+						</label>
+					</section>
+				</label>
+				<label class="input-group input-group-sm">
+					<span class="text-primary">Program</span>
+					<section
+						class="flex gap-3 w-max px-2 rounded-xl border border-secondary">
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="program"
+								class="radio radio-accent radio-sm"
+								checked />
+							<span class="label-text text-primary bg-base-100"
+								>Computer Science</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="program"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>Data Science</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="program"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>Information Technology</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="program"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>Information System</span
+							>
+						</label>
+					</section>
+				</label>
+				<label class="input-group input-group-sm">
+					<span class="text-primary">Gender</span>
+					<section
+						class="flex gap-3 w-max px-2 rounded-xl border border-secondary">
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="program"
+								class="radio radio-accent radio-sm"
+								checked />
+							<span class="label-text text-primary bg-base-100"
+								>Male</span
+							>
+						</label>
+						<label class="label cursor-pointer gap-2">
+							<input
+								type="radio"
+								name="program"
+								class="radio radio-accent radio-sm" />
+							<span class="label-text text-primary bg-base-100"
+								>Female</span
+							>
+						</label>
+					</section>
+				</label>
+			</form>
 			<table class="table">
 				<thead class="text-center text-secondary">
 					<tr>
