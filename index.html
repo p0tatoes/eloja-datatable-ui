@@ -12,6 +12,7 @@
 		<script src="https://cdn.tailwindcss.com"></script>
 	</head>
 	<body class="flex justify-center items-center gap-48 mx-0 my-14">
+		<!-- Input Form -->
 		<form class="flex flex-col gap-8" onsubmit="event.preventDefault()">
 			<h1 class="font-extrabold text-3xl text-primary">Input Form</h1>
 			<section>
@@ -134,12 +135,20 @@
 					</label>
 				</div>
 			</section>
+			<label class="input-group">
+				<span class="text-primary">Grade</span>
+				<input
+					type="text"
+					class="input input-bordered input-secondary input-sm w-64 text-accent"
+					placeholder="0 - 100" />
+			</label>
 			<button
 				class="btn btn-sm btn-secondary bg-base-100 text-primary"
 				onclick="newTableEntry()">
 				Submit
 			</button>
 		</form>
+		<!-- Table -->
 		<section class="flex flex-col gap-8">
 			<form class="flex flex-col gap-3" onsubmit="event.preventDefault()">
 				<section>
