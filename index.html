@@ -22,8 +22,9 @@
 					<input
 						type="text"
 						name="name"
+						id="name"
 						class="input input-bordered input-secondary input-sm w-64 text-accent"
-						placeholder="Juan Dela Cruz" />
+						placeholder="e.g. Juan Dela Cruz" />
 				</label>
 			</section>
 			<section
@@ -35,6 +36,7 @@
 							type="radio"
 							name="year"
 							class="radio radio-accent"
+							value="1st"
 							checked />
 					</label>
 				</div>
@@ -44,7 +46,8 @@
 						<input
 							type="radio"
 							name="year"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="2nd" />
 					</label>
 				</div>
 				<div>
@@ -53,7 +56,8 @@
 						<input
 							type="radio"
 							name="year"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="3rd" />
 					</label>
 				</div>
 				<div>
@@ -62,7 +66,8 @@
 						<input
 							type="radio"
 							name="year"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="4th" />
 					</label>
 				</div>
 			</section>
@@ -77,6 +82,7 @@
 							type="radio"
 							name="program"
 							class="radio radio-accent"
+							value="Computer Science"
 							checked />
 					</label>
 				</div>
@@ -88,7 +94,8 @@
 						<input
 							type="radio"
 							name="program"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="Data Science" />
 					</label>
 				</div>
 				<div>
@@ -99,7 +106,8 @@
 						<input
 							type="radio"
 							name="program"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="Information Technology" />
 					</label>
 				</div>
 				<div>
@@ -110,7 +118,8 @@
 						<input
 							type="radio"
 							name="program"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="Information System" />
 					</label>
 				</div>
 			</section>
@@ -123,6 +132,7 @@
 							type="radio"
 							name="gender"
 							class="radio radio-accent"
+							value="Male"
 							checked />
 					</label>
 				</div>
@@ -132,7 +142,8 @@
 						<input
 							type="radio"
 							name="gender"
-							class="radio radio-accent" />
+							class="radio radio-accent"
+							value="Female" />
 					</label>
 				</div>
 			</section>
@@ -140,16 +151,18 @@
 				<span class="text-primary">Grade</span>
 				<input
 					type="text"
+					id="grade"
 					class="input input-bordered input-secondary input-sm w-64 text-accent"
 					placeholder="0 - 100" />
 			</label>
+
 			<button
 				class="btn btn-sm btn-secondary bg-base-100 text-primary"
-				onclick="newTableEntry()">
+				id="submit_btn">
 				Submit
 			</button>
 		</form>
-		<!-- Table -->
+		<!-- Search Query -->
 		<section class="flex flex-col gap-8">
 			<form class="flex flex-col gap-3" onsubmit="event.preventDefault()">
 				<section>
@@ -157,7 +170,7 @@
 						<span class="text-primary">Name</span>
 						<input
 							type="text"
-							name="name"
+							name="search_name"
 							class="input input-bordered input-secondary input-sm w-64 text-accent"
 							placeholder="Juan Dela Cruz" />
 					</label>
@@ -169,7 +182,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="year"
+								name="search_year"
 								class="radio radio-accent radio-sm"
 								checked />
 							<span class="label-text text-primary bg-base-100"
@@ -179,7 +192,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="year"
+								name="search_year"
 								class="radio radio-accent radio-sm" />
 							<span class="label-text text-primary bg-base-100"
 								>2nd</span
@@ -188,7 +201,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="year"
+								name="search_year"
 								class="radio radio-accent radio-sm" />
 							<span class="label-text text-primary bg-base-100"
 								>3rd</span
@@ -197,7 +210,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="year"
+								name="search_year"
 								class="radio radio-accent radio-sm" />
 							<span class="label-text text-primary bg-base-100"
 								>4th</span
@@ -212,7 +225,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="program"
+								name="search_program"
 								class="radio radio-accent radio-sm"
 								checked />
 							<span class="label-text text-primary bg-base-100"
@@ -222,7 +235,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="program"
+								name="search_program"
 								class="radio radio-accent radio-sm" />
 							<span class="label-text text-primary bg-base-100"
 								>Data Science</span
@@ -231,7 +244,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="program"
+								name="search_program"
 								class="radio radio-accent radio-sm" />
 							<span class="label-text text-primary bg-base-100"
 								>Information Technology</span
@@ -240,7 +253,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="program"
+								name="search_program"
 								class="radio radio-accent radio-sm" />
 							<span class="label-text text-primary bg-base-100"
 								>Information System</span
@@ -255,7 +268,7 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="gender"
+								name="search_gender"
 								class="radio radio-accent radio-sm"
 								checked />
 							<span class="label-text text-primary bg-base-100"
@@ -273,20 +286,28 @@
 						</label>
 					</section>
 				</label>
+				<!-- TODO: create a function that searchs table entries based on search form inputs -->
+				<button
+					class="btn btn-sm btn-secondary bg-base-100 text-primary w-48"
+					id="search_btn"
+					onclick="return false">
+					Search
+				</button>
 			</form>
+			<!-- Table -->
 			<table class="table">
 				<thead class="text-center text-secondary">
 					<tr>
 						<th>NAME</th>
 						<th>YEAR</th>
-						<th>COURSE</th>
+						<th>PROGRAM</th>
 						<th>GENDER</th>
 						<th>FINAL GRADE</th>
 						<th>ACTION</th>
 					</tr>
 				</thead>
 				<tbody class="text-primary">
-					<tr class="hover">
+					<!-- <tr class="hover">
 						<td>Marvin Eloja</td>
 						<td>2nd</td>
 						<td>IT</td>
@@ -395,15 +416,27 @@
 								</svg>
 							</button>
 						</td>
-					</tr>
+					</tr> -->
 				</tbody>
 				<tfoot class="text-accent">
 					<tr>
 						<th colspan="4">AVG. GRADE</th>
-						<td colspan="2">100</td>
+						<td id="avg_grade" colspan="2"></td>
 					</tr>
 				</tfoot>
 			</table>
+		</section>
+		<section class="toast toast-end">
+			<section id="errormsg_num" class="alert alert-error hidden">
+				<div>
+					<span>Grade must be a number!</span>
+				</div>
+			</section>
+			<section id="errormsg_empty" class="alert alert-error hidden">
+				<div>
+					<span>All fields must be answered!</span>
+				</div>
+			</section>
 		</section>
 	</body>
 </html>
