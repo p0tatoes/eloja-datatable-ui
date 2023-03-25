@@ -10,6 +10,7 @@
 			rel="stylesheet"
 			type="text/css" />
 		<script src="https://cdn.tailwindcss.com"></script>
+		<script src="main.js" defer></script>
 	</head>
 	<body class="flex justify-center items-center gap-48 mx-0 my-14">
 		<!-- Input Form -->
@@ -404,21 +405,5 @@
 				</tfoot>
 			</table>
 		</section>
-		<script>
-			var clicked = false
-
-			function newTableEntry() {
-				if (clicked === false) {
-					clicked = true
-					const table = document.querySelector('tbody.text-primary')
-					const average = document.querySelector('tfoot tr td')
-
-					let newEntry =
-						"<tr class='hover'><td>Juan Dela Cruz</td><td>1st</td><td>CS</td><td>Male</td><td>90</td><td class='text-center'><button class='btn btn-sm btn-outline btn-error btn-circle'><svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-x-lg' viewBox='0 0 16 16'><path d='M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z' /></svg></button></td></tr>"
-					table.insertAdjacentHTML('beforeend', newEntry)
-					average.innerHTML = '98.33'
-				}
-			}
-		</script>
 	</body>
 </html>
