@@ -10,7 +10,6 @@
 			rel="stylesheet"
 			type="text/css" />
 		<script src="https://cdn.tailwindcss.com"></script>
-		<script src="main.js" defer></script>
 	</head>
 	<body class="flex justify-center items-center gap-48 mx-0 my-14">
 		<!-- Input Form -->
@@ -184,6 +183,7 @@
 								type="radio"
 								name="search_year"
 								class="radio radio-accent radio-sm"
+								value="1st"
 								checked />
 							<span class="label-text text-primary bg-base-100"
 								>1st</span
@@ -193,7 +193,8 @@
 							<input
 								type="radio"
 								name="search_year"
-								class="radio radio-accent radio-sm" />
+								class="radio radio-accent radio-sm"
+								value="2nd" />
 							<span class="label-text text-primary bg-base-100"
 								>2nd</span
 							>
@@ -202,7 +203,8 @@
 							<input
 								type="radio"
 								name="search_year"
-								class="radio radio-accent radio-sm" />
+								class="radio radio-accent radio-sm"
+								value="3rd" />
 							<span class="label-text text-primary bg-base-100"
 								>3rd</span
 							>
@@ -211,7 +213,8 @@
 							<input
 								type="radio"
 								name="search_year"
-								class="radio radio-accent radio-sm" />
+								class="radio radio-accent radio-sm"
+								value="4th" />
 							<span class="label-text text-primary bg-base-100"
 								>4th</span
 							>
@@ -227,6 +230,7 @@
 								type="radio"
 								name="search_program"
 								class="radio radio-accent radio-sm"
+								value="Computer Science"
 								checked />
 							<span class="label-text text-primary bg-base-100"
 								>Computer Science</span
@@ -236,7 +240,8 @@
 							<input
 								type="radio"
 								name="search_program"
-								class="radio radio-accent radio-sm" />
+								class="radio radio-accent radio-sm"
+								value="Data Science" />
 							<span class="label-text text-primary bg-base-100"
 								>Data Science</span
 							>
@@ -245,7 +250,8 @@
 							<input
 								type="radio"
 								name="search_program"
-								class="radio radio-accent radio-sm" />
+								class="radio radio-accent radio-sm"
+								value="Information Technology" />
 							<span class="label-text text-primary bg-base-100"
 								>Information Technology</span
 							>
@@ -254,7 +260,8 @@
 							<input
 								type="radio"
 								name="search_program"
-								class="radio radio-accent radio-sm" />
+								class="radio radio-accent radio-sm"
+								value="Information System" />
 							<span class="label-text text-primary bg-base-100"
 								>Information System</span
 							>
@@ -270,6 +277,7 @@
 								type="radio"
 								name="search_gender"
 								class="radio radio-accent radio-sm"
+								value="Male"
 								checked />
 							<span class="label-text text-primary bg-base-100"
 								>Male</span
@@ -278,21 +286,27 @@
 						<label class="label cursor-pointer gap-2">
 							<input
 								type="radio"
-								name="gender"
-								class="radio radio-accent radio-sm" />
+								name="search_gender"
+								class="radio radio-accent radio-sm"
+								value="Female" />
 							<span class="label-text text-primary bg-base-100"
 								>Female</span
 							>
 						</label>
 					</section>
 				</label>
-				<!-- TODO: create a function that searchs table entries based on search form inputs -->
-				<button
-					class="btn btn-sm btn-secondary bg-base-100 text-primary w-48"
-					id="search_btn"
-					onclick="return false">
-					Search
-				</button>
+				<section class="flex items-center gap-5">
+					<button
+						class="btn btn-sm btn-secondary bg-base-100 text-primary w-48"
+						onclick="searchFilter()">
+						Search
+					</button>
+					<button
+						class="btn btn-sm btn-secondary bg-base-100 text-primary w-48"
+						onclick="loadDataTable()">
+						Reset
+					</button>
+				</section>
 			</form>
 			<!-- Table -->
 			<table class="table">
@@ -306,118 +320,7 @@
 						<th>ACTION</th>
 					</tr>
 				</thead>
-				<tbody class="text-primary">
-					<!-- <tr class="hover">
-						<td>Marvin Eloja</td>
-						<td>2nd</td>
-						<td>IT</td>
-						<td>Male</td>
-						<td>100</td>
-						<td class="text-center">
-							<button
-								class="btn btn-sm btn-outline btn-error btn-circle">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-x-lg"
-									viewBox="0 0 16 16">
-									<path
-										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-								</svg>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover">
-						<td>Kervi Asombrado</td>
-						<td>2nd</td>
-						<td>IT</td>
-						<td>Male</td>
-						<td>100</td>
-						<td class="text-center">
-							<button
-								class="btn btn-sm btn-outline btn-error btn-circle">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-x-lg"
-									viewBox="0 0 16 16">
-									<path
-										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-								</svg>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover">
-						<td>Kurt Mercado</td>
-						<td>2nd</td>
-						<td>IT</td>
-						<td>Male</td>
-						<td>100</td>
-						<td class="text-center">
-							<button
-								class="btn btn-sm btn-outline btn-error btn-circle">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-x-lg"
-									viewBox="0 0 16 16">
-									<path
-										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-								</svg>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover">
-						<td>Ethan Zogg</td>
-						<td>2nd</td>
-						<td>IT</td>
-						<td>Male</td>
-						<td>100</td>
-						<td class="text-center">
-							<button
-								class="btn btn-sm btn-outline btn-error btn-circle">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-x-lg"
-									viewBox="0 0 16 16">
-									<path
-										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-								</svg>
-							</button>
-						</td>
-					</tr>
-					<tr class="hover">
-						<td>Cian Chang</td>
-						<td>2nd</td>
-						<td>IT</td>
-						<td>Male</td>
-						<td>100</td>
-						<td class="text-center">
-							<button
-								class="btn btn-sm btn-outline btn-error btn-circle">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="16"
-									height="16"
-									fill="currentColor"
-									class="bi bi-x-lg"
-									viewBox="0 0 16 16">
-									<path
-										d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-								</svg>
-							</button>
-						</td>
-					</tr> -->
-				</tbody>
+				<tbody class="text-primary"></tbody>
 				<tfoot class="text-accent">
 					<tr>
 						<th colspan="4">AVG. GRADE</th>
@@ -438,5 +341,6 @@
 				</div>
 			</section>
 		</section>
+		<script src="main.js"></script>
 	</body>
 </html>
